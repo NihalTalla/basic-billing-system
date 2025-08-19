@@ -1,0 +1,55 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("welcome to CMR restaurant");
+        System.out.println("hi,plz enter your name");
+        String name=sc.nextLine();
+        System.out.println("hey"+name+"what do u like to oder");
+        System.out.println("1.Dal fry=40");
+        System.out.println("2.Paneer butter masala=100");
+        System.out.println("3.chicken=120");
+        System.out.println("4.fish fry=100");
+        System.out.println("5.tomato curry=30");
+        System.out.println("select from the menu:");
+        int item=sc.nextInt();
+        System.out.println("plz enter quantity:");
+        int quantity=sc.nextInt();
+        int cost=0;
+        switch(item){
+            case 1:
+            cost=40*quantity;
+            System.out.println("you have selected Dal fry pay"+cost);
+            break;
+            case 2:
+            cost=100*quantity;
+            System.out.println("you have selected Dal fry pay"+cost);
+            break;
+            case 3:
+            cost=120*quantity;
+            System.out.println("you have selected Dal fry pay"+cost);
+            break;
+             case 4:
+            cost=100*quantity;
+            System.out.println("you have selected Dal fry pay"+cost);
+            break;
+             case 6:
+            cost=30*quantity;
+            System.out.println("you have selected Dal fry pay"+cost);
+            break;
+            default:System.out.println("invalid");break;
+        }
+        int bill=sc.nextInt();
+        
+        if (bill!=cost){
+            System.out.println("enter right amount");
+        }
+        else{
+        System.out.println("oder placed kindly wait");
+            
+        }
+        
+    }
+}
