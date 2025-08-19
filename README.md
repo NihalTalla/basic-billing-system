@@ -1,37 +1,57 @@
 # basic-billing-system
-A billing system is a program or process that handles customer transactions by recording orders, calculating costs, and generating the final bill.
 
-In your program’s context (restaurant billing system), the billing process works like this:
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("welcome to CMR restaurant");
+        System.out.println("hi,plz enter your name");
+        String name=sc.nextLine();
+        System.out.println("hey"+name+"what do u like to oder");
+        System.out.println("1.Dal fry=40");
+        System.out.println("2.Paneer butter masala=100");
+        System.out.println("3.chicken=120");
+        System.out.println("4.fish fry=100");
+        System.out.println("5.tomato curry=30");
+        System.out.println("select from the menu:");
+        int item=sc.nextInt();
+        System.out.println("plz enter quantity:");
+        int quantity=sc.nextInt();
+        int cost=0;
+        switch(item){
+            case 1:
+            cost=40*quantity;
+            System.out.println("you have selected Dal fry pay"+cost);
+            break;
+            case 2:
+            cost=100*quantity;
+            System.out.println("you have selected Dal fry pay"+cost);
+            break;
+            case 3:
+            cost=120*quantity;
+            System.out.println("you have selected Dal fry pay"+cost);
+            break;
+             case 4:
+            cost=100*quantity;
+            System.out.println("you have selected Dal fry pay"+cost);
+            break;
+             case 6:
+            cost=30*quantity;
+            System.out.println("you have selected Dal fry pay"+cost);
+            break;
+            default:System.out.println("invalid");break;
+        }
+        int bill=sc.nextInt();
+        
+        if (bill!=cost){
+            System.out.println("enter right amount");
+        }
+        else{
+        System.out.println("oder placed kindly wait");
+            
+        }
+        
+    }
+}
 
-Customer Identification
 
-The system takes the customer’s name to personalize the experience.
-
-Menu Display
-
-The available items and their prices are shown so the customer can choose.
-
-Order Placement
-
-The customer selects a dish from the menu by entering the item number.
-
-The system asks for the number of quantities they want.
-
-Bill Calculation
-
-Based on the chosen item and quantity, the system calculates the total cost.
-
-Example: If a Dal fry costs ₹40 and quantity is 2, the cost = 40 × 2 = 80.
-
-Bill Display
-
-The system informs the customer of the total amount to be paid for their order.
-
-Order Confirmation
-
-After showing the bill, the system confirms that the order has been placed.
-
-In a real-world system, this would also update records, inventory, or send the order to the kitchen.
-
-✅ In short:
-Your billing system automates the process of taking orders, calculating the bill, and confirming the order, making the restaurant workflow easier and more efficient.
